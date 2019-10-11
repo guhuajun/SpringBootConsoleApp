@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hanulhan</groupId>
-    <artifactId>consoleApp</artifactId>
+    <artifactId>SpringBootConsoleApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consoleApp</name>
+    <name>SpringBootConsoleApp</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
