@@ -1,6 +1,10 @@
 package com.hanulhan.consoleApp;
 
 import static java.lang.System.exit;
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,10 +24,17 @@ public class ConsoleAppApplication implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
 
+        Random rand = new Random();
+
         if (args.length > 0) {
             System.out.println(helloService.getMessage(args[0].toString()));
         } else {
-            System.out.println(helloService.getMessage());
+            while (true) {
+                // System.out.println(helloService.getMessage());
+                String number = String.valueOf(rand.nextInt(50) + 1);
+                System.out.println(String.format("Consumed %s messages.", number));
+                TimeUnit.SECONDS.sleep(1);
+            }
         }
 
         exit(0);
